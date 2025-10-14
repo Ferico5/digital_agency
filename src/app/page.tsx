@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import LinkButton from '@/components/LinkButton/page';
 
 const HomePage = () => {
   return (
-    <div className="flex justify-between items-center min-h-[79vh]">
+    <div className="flex justify-between items-center min-h-[70vh]">
       {/* left side content */}
       <div className="flex flex-col justify-between w-[50%]">
         <h1
@@ -14,9 +14,7 @@ const HomePage = () => {
         </h1>
         <p className="textw-[50%]">Turning your idea into Reality. We bring together the teams rom the global team industry</p>
         <div className="mt-7">
-          <Link href="/portfolio" className="bg-[#53C38B] p-3 rounded-sm">
-            See Our Works
-          </Link>
+          <LinkButton href="/portfolio" textButton="See Our Works"></LinkButton>
         </div>
       </div>
       {/* right side content */}
