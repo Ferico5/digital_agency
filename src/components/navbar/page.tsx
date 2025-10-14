@@ -40,7 +40,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between mb-8">
       <Link href="/">
         <h1>LamaDev</h1>
       </Link>

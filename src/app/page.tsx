@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const HomePage = () => {
   return (
-    <div className="flex justify-between items-center min-h-[88vh]">
+    <div className="flex justify-between items-center min-h-[79vh]">
       {/* left side content */}
       <div className="flex flex-col justify-between w-[50%]">
         <h1
