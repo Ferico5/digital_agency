@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className="flex items-center justify-between pb-2 pt-8">
+    <div className="flex items-center justify-between py-2 mt-15 border-t">
       <p>©2025 LamaDev. All right reserved.</p>
       {/* social media icon */}
       <div className="flex gap-4">
