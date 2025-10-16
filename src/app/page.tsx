@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import LinkButton from '@/components/LinkButton/page';
+import LinkButton from '@/components/LinkButton/LinkButton';
 
 const HomePage = () => {
   return (
