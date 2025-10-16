@@ -1,0 +1,4 @@
+inode_modules/
+.next/
+dist/
+src/generated/
