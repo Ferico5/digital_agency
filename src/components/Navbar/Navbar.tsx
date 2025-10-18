@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SignInButton, UserButton, SignedIn, SignedOut } from '@clerk/nextjs';
 
 const links = [
   {
@@ -40,16 +41,25 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-between mb-8">
+    <div className="flex items-center justify-between mb-8">
       <Link href="/">
         <h1>LamaDev</h1>
       </Link>
-      <div className="flex gap-5">
+      <div className="flex gap-5 items-center ">
         {links.map((link) => (
           <Link key={link.id} href={link.url} className={`hover:text-green-400 transition ${pathname === link.url ? 'text-green-500 font-semibold' : 'text-white'}`}>
             {link.title}
           </Link>
         ))}
+        <SignedOut>
+          <SignInButton mode="modal">
+            <button className="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-700 transition hover:cursor-pointer">Sign In</button>
+          </SignInButton>
+        </SignedOut>
+
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );
