@@ -11,6 +11,7 @@ const seedBlog = async () => {
         content: 'Lorem ipsum dolor sit amet...',
         image: '/apps.jpg',
         author: 'John Doe',
+        authorId: 'seed-user-001',
       },
       {
         title: 'Blog 2',
@@ -18,6 +19,7 @@ const seedBlog = async () => {
         content: 'Lorem ipsum dolor sit amet...',
         image: '/apps.jpg',
         author: 'John Doe',
+        authorId: 'seed-user-001',
       },
       {
         title: 'Blog 3',
@@ -25,6 +27,7 @@ const seedBlog = async () => {
         content: 'Lorem ipsum dolor sit amet...',
         image: '/apps.jpg',
         author: 'John Doe',
+        authorId: 'seed-user-001',
       },
     ];
 
@@ -48,6 +51,14 @@ export async function getAllBlogs() {
 export async function getBlogById(id: string) {
   return prisma.blog.findUnique({
     where: { id },
+  });
+}
+
+export async function getUserBlogs(userId: string) {
+  return prisma.blog.findMany({
+    where: { authorId: userId },
+    orderBy: { createdAt: 'desc' },
+    take: 3,
   });
 }
 
