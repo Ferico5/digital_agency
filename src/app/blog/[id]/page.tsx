@@ -23,7 +23,7 @@ const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
             <span className="text-[#999]">Author:</span> {blog.author}
           </p>
         </div>
-        <Image src={blog.image} alt="Blog Image" width={400} height={370}></Image>
+        <Image src={blog.image} alt="Blog Image" width={400} height={370} unoptimized></Image>
       </div>
 
       {/* Content */}
