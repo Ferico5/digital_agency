@@ -8,7 +8,7 @@ const DashboardPage = async () => {
 
   const blogs = await getUserBlogs(userId);
 
-  return <DashboardContent blogs={blogs} />;
+  return <DashboardContent blogs={blogs} userId={userId!} />;
 };
 
 export default DashboardPage;
